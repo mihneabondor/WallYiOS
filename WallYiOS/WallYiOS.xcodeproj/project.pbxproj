@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9ABE01B9294CD6BF00EAE9CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01B8294CD6BF00EAE9CB /* HomeViewController.swift */; };
+		9ABE01BB294CD6C400EAE9CB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01BA294CD6C400EAE9CB /* SettingsViewController.swift */; };
+		9ABE01BD294CD85C00EAE9CB /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01BC294CD85C00EAE9CB /* GradientLabel.swift */; };
+		9ABE01BF294CE9FC00EAE9CB /* StatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01BE294CE9FC00EAE9CB /* StatView.swift */; };
 		D70F3A44294BB62F00BB9858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70F3A43294BB62F00BB9858 /* AppDelegate.swift */; };
 		D70F3A46294BB62F00BB9858 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70F3A45294BB62F00BB9858 /* SceneDelegate.swift */; };
-		D70F3A48294BB62F00BB9858 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70F3A47294BB62F00BB9858 /* ViewController.swift */; };
+		D70F3A48294BB62F00BB9858 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70F3A47294BB62F00BB9858 /* WelcomeViewController.swift */; };
 		D70F3A4B294BB62F00BB9858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70F3A49294BB62F00BB9858 /* Main.storyboard */; };
 		D70F3A4D294BB63100BB9858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D70F3A4C294BB63100BB9858 /* Assets.xcassets */; };
 		D70F3A50294BB63100BB9858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D70F3A4E294BB63100BB9858 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9ABE01B8294CD6BF00EAE9CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9ABE01BA294CD6C400EAE9CB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9ABE01BC294CD85C00EAE9CB /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
+		9ABE01BE294CE9FC00EAE9CB /* StatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatView.swift; sourceTree = "<group>"; };
 		D70F3A40294BB62F00BB9858 /* WallYiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallYiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70F3A43294BB62F00BB9858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D70F3A45294BB62F00BB9858 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D70F3A47294BB62F00BB9858 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D70F3A47294BB62F00BB9858 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D70F3A4A294BB62F00BB9858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D70F3A4C294BB63100BB9858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D70F3A4F294BB63100BB9858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +45,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9ABE01B4294CD68700EAE9CB /* Interface Manager */ = {
+			isa = PBXGroup;
+			children = (
+				D70F3A47294BB62F00BB9858 /* WelcomeViewController.swift */,
+				9ABE01B8294CD6BF00EAE9CB /* HomeViewController.swift */,
+				9ABE01BA294CD6C400EAE9CB /* SettingsViewController.swift */,
+				9ABE01B6294CD69E00EAE9CB /* Custom Classes */,
+				9ABE01B7294CD6A500EAE9CB /* Modals */,
+			);
+			path = "Interface Manager";
+			sourceTree = "<group>";
+		};
+		9ABE01B5294CD69300EAE9CB /* Logic Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Logic Manager";
+			sourceTree = "<group>";
+		};
+		9ABE01B6294CD69E00EAE9CB /* Custom Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9ABE01BC294CD85C00EAE9CB /* GradientLabel.swift */,
+				9ABE01BE294CE9FC00EAE9CB /* StatView.swift */,
+			);
+			path = "Custom Classes";
+			sourceTree = "<group>";
+		};
+		9ABE01B7294CD6A500EAE9CB /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modals;
+			sourceTree = "<group>";
+		};
 		D70F3A37294BB62F00BB9858 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +101,8 @@
 			children = (
 				D70F3A43294BB62F00BB9858 /* AppDelegate.swift */,
 				D70F3A45294BB62F00BB9858 /* SceneDelegate.swift */,
-				D70F3A47294BB62F00BB9858 /* ViewController.swift */,
+				9ABE01B5294CD69300EAE9CB /* Logic Manager */,
+				9ABE01B4294CD68700EAE9CB /* Interface Manager */,
 				D70F3A49294BB62F00BB9858 /* Main.storyboard */,
 				D70F3A4C294BB63100BB9858 /* Assets.xcassets */,
 				D70F3A4E294BB63100BB9858 /* LaunchScreen.storyboard */,
@@ -138,9 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D70F3A48294BB62F00BB9858 /* ViewController.swift in Sources */,
+				D70F3A48294BB62F00BB9858 /* WelcomeViewController.swift in Sources */,
+				9ABE01BF294CE9FC00EAE9CB /* StatView.swift in Sources */,
 				D70F3A44294BB62F00BB9858 /* AppDelegate.swift in Sources */,
 				D70F3A46294BB62F00BB9858 /* SceneDelegate.swift in Sources */,
+				9ABE01BB294CD6C400EAE9CB /* SettingsViewController.swift in Sources */,
+				9ABE01BD294CD85C00EAE9CB /* GradientLabel.swift in Sources */,
+				9ABE01B9294CD6BF00EAE9CB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
