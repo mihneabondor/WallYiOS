@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import Charts
 
 struct StatView: View {
+    @State public var data : [Operation] = Functions.SharedInstance.getData(key: "wallyios.savedOperations")
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Chart {
+            ForEach(data) {data in
+                BarMark(
+                    x: .value("date", data.weekDay),
+                    y: .value("amount", data.amount)
+                )
+            }
+        }.padding()
     }
 }
 

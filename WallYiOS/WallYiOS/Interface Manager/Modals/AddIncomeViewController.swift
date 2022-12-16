@@ -25,6 +25,12 @@ class AddIncomeViewController: UIViewController {
     }
     @IBAction func addTapped(_ sender: Any) {
         //Add stuff
+        let number = Int(amountField.text ?? "0")
+        var data = Functions.SharedInstance.getData(key: "wallyios.savedOperations")
+        
+        data.append(Operation(amount: number!, date: Date(), weekDay: Date().dayOfWeek()))
+        Functions.SharedInstance.saveData(key: "wallyios.savedOperations", array: data)
+        
         UIView.animate(withDuration: 0.1) {
             self.dismissBtn.alpha = 0.0
         } completion: { _ in

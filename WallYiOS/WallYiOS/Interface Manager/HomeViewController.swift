@@ -43,10 +43,24 @@ class HomeViewController: UIViewController {
         
     }
     
+    var data = Functions.SharedInstance.getData(key: "wallyios.savedOperations")
+    @IBOutlet var NetworthLabel : UILabel!
+    func networthLabelSetup() {
+        var sum = 0;
+        for item in data {
+            sum += item.amount
+        }
+        
+        // TODO: de adaugat currency ul
+        NetworthLabel.text = "\(sum) RON"
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         styleTabBar()
         styleViewController()
+        networthLabelSetup()
     }
     
     func styleViewController() {
