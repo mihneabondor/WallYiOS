@@ -23,11 +23,13 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var networthView: UIView!
     @IBOutlet weak var addIncomeView: UIView!
     @IBAction func addIncomeTapped(_ sender: Any) {
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddIncomeVC") as! AddIncomeViewController
+        self.present(vc, animated: true)
     }
     @IBOutlet weak var addExpenseView: UIView!
     @IBAction func addExpenseTapped(_ sender: Any) {
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "AddExpenseVC") as! AddExpenseViewController
+        self.present(vc, animated: true)
     }
     
     @IBOutlet weak var statsView: UIView!
@@ -56,6 +58,7 @@ class HomeViewController: UIViewController {
         //Adding chart
         let childView = UIHostingController(rootView: StatView())
         childView.view.frame = statsView.bounds
+        childView.view.layer.cornerRadius = 16
         statsView.addSubview(childView.view)
     }
     
