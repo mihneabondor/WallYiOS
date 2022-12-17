@@ -31,6 +31,16 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var cardView5: UIView!
     
     @IBAction func deleteDataTapped(_ sender: Any) {
+        data = [.init(amount: 0, weekDay: "Mon"),
+                .init(amount: 0, weekDay: "Tue"),
+                .init(amount: 0, weekDay: "Wed"),
+                .init(amount: 0, weekDay: "Thu"),
+                .init(amount: 0, weekDay: "Fri"),
+                .init(amount: 0, weekDay: "Sat"),
+                .init(amount: 0, weekDay: "Sun")]
+        Functions.SharedInstance.saveData(key: "wallyios.savedOperations", array: data)
+        NotificationCenter.default.post(name: .refreshNetworthView, object: nil)
+        NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
         UserDefaults.standard.set(false, forKey: "wallyios.setupdone")
         let window = self.view.window
         let welcomeVC = storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeViewController

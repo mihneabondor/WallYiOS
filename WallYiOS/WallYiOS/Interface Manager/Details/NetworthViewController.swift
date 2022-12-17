@@ -8,10 +8,7 @@
 import UIKit
 
 class NetworthViewController: UIViewController {
-    
-    var mockData = ["55 RON", "130 RON", "10 RON", "23 RON"]
-    var mockDataSigns = ["minus", "plus", "minus", "plus"]
-    
+    var tableData : [Operation] = data.filter{$0.amount != 0}
     @IBAction func backTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }
@@ -43,12 +40,15 @@ class NetworthViewController: UIViewController {
     
     func manageObs() {
         NotificationCenter.default.removeObserver(self)
-        NotificationCenter.default.addObserver(self, selector: #selector(refreshHomeScreen), name: .refreshHomeScreen, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshNetWorthView), name: .refreshNetworthView, object: nil)
     }
     
-    @objc func refreshHomeScreen() {
+    @objc func refreshNetWorthView() {
         DispatchQueue.main.async {
             self.networthLabelSetup()
+            self.tableData = data.filter{$0.amount != 0}
+            self.operationsTableView.reloadData()
+            
         }
     }
 
@@ -74,24 +74,25 @@ extension NetworthViewController: UITableViewDataSource, UITableViewDelegate {
         return 70
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return tableData.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OperationCell") as! OperationCell
-        cell.numberLbl.text = mockData[indexPath.row]
-        cell.signIcon.image = UIImage(systemName: mockDataSigns[indexPath.row])
-        
-        if mockDataSigns[indexPath.row] == "plus" {
+        cell.numberLbl.text = String(abs(tableData[indexPath.row].amount))
+        if tableData[indexPath.row].amount > 0 {
+            cell.signIcon.image = UIImage(systemName: "plus")
             cell.numberLbl.textColor = UIColor(named: "OldPurple")!
             cell.signIcon.tintColor = UIColor(named: "OldPurple")!
         } else {
+            cell.signIcon.image = UIImage(systemName: "minus")
             cell.numberLbl.textColor = UIColor(named: "BabyBlue")!
             cell.signIcon.tintColor = UIColor(named: "BabyBlue")!
         }
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy"
         
-        cell.dateLbl.text = dateFormatter.string(from: Date())
+        cell.dateLbl.text = dateFormatter.string(from: tableData[indexPath.row].date)
         
         return cell
     }

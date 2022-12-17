@@ -19,4 +19,5 @@ extension Date {
 
 extension Notification.Name {
     static let refreshHomeScreen = Notification.Name("wallyios.refreshHomeScreen")
+    static let refreshNetworthView = Notification.Name("wallyios.refreshNetworthView")
 }

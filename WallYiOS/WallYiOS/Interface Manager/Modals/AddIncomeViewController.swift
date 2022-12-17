@@ -30,6 +30,7 @@ class AddIncomeViewController: UIViewController {
         data.append(Operation(amount: number!, date: Date(), weekDay: Date().dayOfWeek()))
         Functions.SharedInstance.saveData(key: "wallyios.savedOperations", array: data)
         NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
+        NotificationCenter.default.post(name: .refreshNetworthView, object: nil)
         
         UIView.animate(withDuration: 0.1) {
             self.dismissBtn.alpha = 0.0
