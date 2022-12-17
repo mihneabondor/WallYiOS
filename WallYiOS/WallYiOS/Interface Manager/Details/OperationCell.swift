@@ -8,10 +8,17 @@
 import UIKit
 
 class OperationCell: UITableViewCell {
+    
+    @IBOutlet weak var cardView: UIView!
 
+    @IBOutlet weak var numberLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
+    
+    @IBOutlet weak var signIcon: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        cardView.layer.cornerRadius = 13.0
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
