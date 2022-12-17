@@ -1393,14 +1393,70 @@
                                 <rect key="frame" x="16" y="390" width="361" height="462"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="kWp-4R-Wty">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OperationCell" rowHeight="70" id="kWp-4R-Wty" customClass="OperationCell" customModule="WallYiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kWp-4R-Wty" id="ZMi-si-83W">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrC-eH-6Th">
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="60"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50 RON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XT5-N0-hx7">
+                                                            <rect key="frame" x="50.999999999999993" y="13.666666666666664" width="96.333333333333314" height="33"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="33" id="XuF-Av-84f"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="27"/>
+                                                            <color key="textColor" name="OldPurple"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17.12.2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lw-Qe-kA0">
+                                                            <rect key="frame" x="278.66666666666669" y="32" width="72.333333333333314" height="18"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="18" id="tCX-g4-dnk"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <color key="textColor" systemColor="systemGrayColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RwZ-CH-YEC">
+                                                            <rect key="frame" x="12" y="9.9999999999999964" width="28" height="38.333333333333329"/>
+                                                            <color key="tintColor" name="AccentColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="28" id="BCa-j5-IGD"/>
+                                                            </constraints>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" weight="medium"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="Detail"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="RwZ-CH-YEC" secondAttribute="bottom" constant="10" id="5ca-5T-5oe"/>
+                                                        <constraint firstItem="XT5-N0-hx7" firstAttribute="centerY" secondItem="IrC-eH-6Th" secondAttribute="centerY" id="D6L-Y3-Ipv"/>
+                                                        <constraint firstItem="XT5-N0-hx7" firstAttribute="leading" secondItem="RwZ-CH-YEC" secondAttribute="trailing" constant="10.999999999999993" id="KmN-eH-3pE"/>
+                                                        <constraint firstAttribute="bottom" secondItem="2Lw-Qe-kA0" secondAttribute="bottom" constant="10" id="VzN-AY-ayo"/>
+                                                        <constraint firstItem="RwZ-CH-YEC" firstAttribute="leading" secondItem="IrC-eH-6Th" secondAttribute="leading" constant="12" id="bqz-p9-hOQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2Lw-Qe-kA0" secondAttribute="trailing" constant="10" id="eAa-Te-UoU"/>
+                                                        <constraint firstItem="RwZ-CH-YEC" firstAttribute="top" secondItem="IrC-eH-6Th" secondAttribute="top" constant="8.0000000000000018" id="t8q-iY-Cbg"/>
+                                                        <constraint firstAttribute="height" constant="60" id="ycG-ST-9YA"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IrC-eH-6Th" firstAttribute="leading" secondItem="ZMi-si-83W" secondAttribute="leading" id="5Vp-F9-8hG"/>
+                                                <constraint firstItem="IrC-eH-6Th" firstAttribute="top" secondItem="ZMi-si-83W" secondAttribute="top" id="Js7-Vt-3L9"/>
+                                                <constraint firstAttribute="trailing" secondItem="IrC-eH-6Th" secondAttribute="trailing" id="jyf-tB-oSJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="IrC-eH-6Th" secondAttribute="bottom" constant="10" id="kLJ-XY-RbY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="Background"/>
+                                        <connections>
+                                            <outlet property="cardView" destination="IrC-eH-6Th" id="kJ0-qU-BNr"/>
+                                            <outlet property="dateLbl" destination="2Lw-Qe-kA0" id="tw0-eW-scT"/>
+                                            <outlet property="numberLbl" destination="XT5-N0-hx7" id="df5-F9-VU5"/>
+                                            <outlet property="signIcon" destination="RwZ-CH-YEC" id="5yi-ET-FXL"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1431,6 +1487,7 @@
                         <outlet property="addExpenseView" destination="djF-jz-jFr" id="WkV-34-EUG"/>
                         <outlet property="addIncomeView" destination="nve-Ur-jzn" id="HIM-Mc-WVp"/>
                         <outlet property="networthView" destination="5bF-IB-20J" id="g8T-aa-k8X"/>
+                        <outlet property="operationsTableView" destination="hLM-gQ-K1o" id="Etn-9e-zaa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HL-Nc-KCg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1446,8 +1503,12 @@
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="minus.circle.fill" catalog="system" width="128" height="123"/>
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="123"/>
         <image name="wallet.pass.fill" catalog="system" width="115" height="128"/>
+        <namedColor name="AccentColor">
+            <color red="0.29800000786781311" green="0.14100000262260437" blue="0.23100000619888306" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="BW">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
