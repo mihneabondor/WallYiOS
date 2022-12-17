@@ -43,7 +43,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func showMoreStatsTapped(_ sender: Any) {
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "StatsVC") as! StatsViewController
+        self.present(vc, animated: true)
     }
     
     
