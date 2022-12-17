@@ -48,9 +48,6 @@ class HomeViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
-    
-    var data = Functions.SharedInstance.getData(key: "wallyios.savedOperations")
-    
     @IBOutlet var NetworthLabel : UILabel!
     
     func networthLabelSetup() {
@@ -121,7 +118,7 @@ class HomeViewController: UIViewController {
         statsView.layer.cornerRadius = 16
         
         //Adding chart
-        let childView = UIHostingController(rootView: StatView())
+        let childView = UIHostingController(rootView: StatView(data: data.filter{$0.amount >= 0}, color: Color("OldPurple")))
         childView.view.frame = statsView.bounds
         childView.view.layer.cornerRadius = 16
         statsView.addSubview(childView.view)

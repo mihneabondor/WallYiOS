@@ -25,6 +25,11 @@ class AddExpenseViewController: UIViewController {
     }
     @IBAction func addTapped(_ sender: Any) {
         //Add stuff
+        let text = -Int(amountField.text ?? "0")!
+        data.append(.init(amount: text, weekDay: Date().dayOfWeek()))
+        Functions.SharedInstance.saveData(key: "wallyios.savedOperations", array: data)
+        NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
+        
         UIView.animate(withDuration: 0.1) {
             self.dismissBtn.alpha = 0.0
         } completion: { _ in

@@ -22,3 +22,4 @@ struct UserPrefs : Identifiable, Codable{
 }
 
 var userPrefs = Functions.SharedInstance.getPrefs(key: "wallyios.userPrefs")
+var data = Functions.SharedInstance.getData(key: "wallyios.savedOperations")

@@ -28,14 +28,14 @@ class StatsViewController: UIViewController {
         
         //Saving stat
         savingStatView.layer.cornerRadius = 16
-        let childView1 = UIHostingController(rootView: StatView())
+        let childView1 = UIHostingController(rootView: StatView(data: data.filter{$0.amount >= 0}, color: Color("OldPurple")))
         childView1.view.frame = savingStatView.bounds
         childView1.view.layer.cornerRadius = 16
         savingStatView.addSubview(childView1.view)
         
         //Spending stat
         spendingStatView.layer.cornerRadius = 16
-        let childView2 = UIHostingController(rootView: StatView())
+        let childView2 = UIHostingController(rootView: StatView(data: data.filter{$0.amount <= 0}, color: Color("BabyBlue")))
         childView2.view.frame = spendingStatView.bounds
         childView2.view.layer.cornerRadius = 16
         spendingStatView.addSubview(childView2.view)

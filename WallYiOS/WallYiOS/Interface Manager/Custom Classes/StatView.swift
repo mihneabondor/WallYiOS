@@ -9,15 +9,15 @@ import SwiftUI
 import Charts
 
 struct StatView: View {
-    @State public var data : [Operation] = Functions.SharedInstance.getData(key: "wallyios.savedOperations")
-    
+    @State public var data : [Operation]!
+    var color : Color!
     var body: some View {
         Chart {
             ForEach(data) {data in
                 BarMark(
                     x: .value("date", data.weekDay),
-                    y: .value("amount", data.amount)
-                )
+                    y: .value("amount", abs(data.amount))
+                ).foregroundStyle(color) //OldPurple
             }
         }.padding()
         .background(Color("Detail"))
