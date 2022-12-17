@@ -642,6 +642,9 @@
                                         </constraints>
                                         <color key="tintColor" name="OldPurple"/>
                                         <color key="onTintColor" name="ElectricPurple"/>
+                                        <connections>
+                                            <action selector="adviceToggleTapped:" destination="nZA-Ia-mCq" eventType="valueChanged" id="dhx-ik-6ZN"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <color key="backgroundColor" name="Detail"/>
@@ -824,6 +827,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adviceToggle" destination="19c-IQ-nbX" id="doH-Tf-Jae"/>
                         <outlet property="cardView1" destination="W2N-5f-QL6" id="ajb-Vp-B4u"/>
                         <outlet property="cardView2" destination="v3h-uD-fSi" id="8uN-33-jqs"/>
                         <outlet property="cardView3" destination="8Bk-rq-Jhs" id="jXC-5V-IEm"/>

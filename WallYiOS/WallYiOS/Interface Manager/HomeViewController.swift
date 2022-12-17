@@ -46,6 +46,7 @@ class HomeViewController: UIViewController {
         
     }
     
+    
     var data = Functions.SharedInstance.getData(key: "wallyios.savedOperations")
     
     @IBOutlet var NetworthLabel : UILabel!
@@ -56,23 +57,24 @@ class HomeViewController: UIViewController {
             sum += item.amount
         }
         
-        // TODO: de adaugat currency ul
-        NetworthLabel.text = "\(sum) RON"
+        NetworthLabel.text = "\(sum)\(userPrefs.currency)"
     }
     
     //MARK: -Tips View-
     @IBOutlet weak var tipLogo: UIImageView!
     @IBAction func tipTapped(_ sender: Any) {
-        if tipView != nil {
-            tipView.dismiss()
+        if userPrefs.adviceToggle == true {
+            if tipView != nil {
+                tipView.dismiss()
+            }
+            UIView.animate(withDuration: 0.25, delay: 0.0, options: [.autoreverse]) {
+                self.tipLogo.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+            } completion: { _ in
+                self.tipLogo.transform = .identity
+            }
+            tipView = EasyTipView(text: TipsManager.sharedInstance.getNewTip())
+            tipView.show(forView: tipLogo, withinSuperview: self.view)
         }
-        UIView.animate(withDuration: 0.25, delay: 0.0, options: [.autoreverse]) {
-            self.tipLogo.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-        } completion: { _ in
-            self.tipLogo.transform = .identity
-        }
-        tipView = EasyTipView(text: TipsManager.sharedInstance.getNewTip())
-        tipView.show(forView: tipLogo, withinSuperview: self.view)
     }
     
     func setUpTipsView() {
@@ -90,8 +92,20 @@ class HomeViewController: UIViewController {
         EasyTipView.globalPreferences = preferences
     }
     
+    func manageObs() {
+        NotificationCenter.default.removeObserver(self)
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshHomeScreen), name: .refreshHomeScreen, object: nil)
+    }
+    
+    @objc func refreshHomeScreen() {
+        DispatchQueue.main.async {
+            self.networthLabelSetup()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        manageObs()
         styleTabBar()
         styleViewController()
         networthLabelSetup()
@@ -122,6 +136,4 @@ class HomeViewController: UIViewController {
         floatingView.layer.shouldRasterize = true
         floatingView.layer.rasterizationScale = UIScreen.main.scale
     }
-    
-
 }

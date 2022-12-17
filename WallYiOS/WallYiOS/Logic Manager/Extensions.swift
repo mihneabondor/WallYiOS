@@ -16,3 +16,7 @@ extension Date {
         return String(string.prefix(upTo: index))
     }
 }
+
+extension Notification.Name {
+    static let refreshHomeScreen = Notification.Name("wallyios.refreshHomeScreen")
+}

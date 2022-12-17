@@ -14,6 +14,11 @@ struct Operation : Identifiable, Codable {
     var weekDay : String
 }
 
-struct UserPrefs {
-    var currency : String = "RON"
+struct UserPrefs : Identifiable, Codable{
+    var id = UUID()
+    var currency : String = " RON"
+    var deleteStatsAfter : Int = 0
+    var adviceToggle : Bool = true
 }
+
+var userPrefs = Functions.SharedInstance.getPrefs(key: "wallyios.userPrefs")

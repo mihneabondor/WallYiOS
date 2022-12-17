@@ -34,4 +34,27 @@ class Functions {
             print("Unable to Encode Array of Reminders ((error))")
         }
     }
+    
+    public func getPrefs(key: String) -> UserPrefs {
+        if let data = UserDefaults.standard.data(forKey: key) {
+            do {
+                let decoder = JSONDecoder()
+                return try decoder.decode(UserPrefs.self, from: data)
+            } catch {
+                print("Unable to Decode Reminders ((error))")
+                return UserPrefs()
+            }
+        }
+        return UserPrefs()
+    }
+    
+    public func savePrefs(key: String, array : UserPrefs) {
+        do {
+            let encoder = JSONEncoder()
+            let data = try encoder.encode(array)
+            UserDefaults.standard.set(data, forKey: key)
+        } catch {
+            print("Unable to Encode Array of Reminders ((error))")
+        }
+    }
 }

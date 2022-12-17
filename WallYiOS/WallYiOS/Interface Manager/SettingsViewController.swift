@@ -32,18 +32,26 @@ class SettingsViewController: UIViewController {
     
     @IBAction func deleteDataTapped(_ sender: Any) {
         UserDefaults.standard.set(false, forKey: "wallyios.setupdone")
-        var window = self.view.window
+        let window = self.view.window
         let welcomeVC = storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeViewController
         window?.rootViewController = welcomeVC
         window?.makeKeyAndVisible()
     }
     
+    @IBOutlet weak var adviceToggle: UISwitch!
+    
+    @IBAction func adviceToggleTapped(_ sender: UISwitch) {
+        userPrefs.adviceToggle = sender.isOn
+        Functions.SharedInstance.savePrefs(key: "wallyios.userPrefs", array: userPrefs)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         styleTabBar()
         styleViewController()
         addMenus()
+        self.currencyBtn.setTitle(userPrefs.currency, for: .normal)
+        self.adviceToggle.isOn = userPrefs.adviceToggle
     }
     
     func styleViewController() {
@@ -59,12 +67,21 @@ class SettingsViewController: UIViewController {
             return [
                 UIAction(title: "RON", image: nil, handler: { (_) in
                     self.currencyBtn.setTitle("RON", for: .normal)
+                    userPrefs.currency = " RON"
+                    Functions.SharedInstance.savePrefs(key: "wallyios.userPrefs", array: userPrefs)
+                    NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
                 }),
                 UIAction(title: "Euro", image: nil, handler: { (_) in
                     self.currencyBtn.setTitle("Euro", for: .normal)
+                    userPrefs.currency = "€"
+                    Functions.SharedInstance.savePrefs(key: "wallyios.userPrefs", array: userPrefs)
+                    NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
                 }),
                 UIAction(title: "Dollar", image: nil, handler: { (_) in
                     self.currencyBtn.setTitle("Dollar", for: .normal)
+                    userPrefs.currency = "$"
+                    Functions.SharedInstance.savePrefs(key: "wallyios.userPrefs", array: userPrefs)
+                    NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
                 })
             ]
         }
@@ -78,12 +95,21 @@ class SettingsViewController: UIViewController {
             return [
                 UIAction(title: "Never", image: nil, handler: { (_) in
                     self.deleteStatsBtn.setTitle("Never", for: .normal)
+                    userPrefs.deleteStatsAfter = 0
+                    Functions.SharedInstance.savePrefs(key: "wallyios.userPrefs", array: userPrefs)
+                    NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
                 }),
                 UIAction(title: "One Month", image: nil, handler: { (_) in
                     self.deleteStatsBtn.setTitle("One Month", for: .normal)
+                    userPrefs.deleteStatsAfter = 30
+                    Functions.SharedInstance.savePrefs(key: "wallyios.userPrefs", array: userPrefs)
+                    NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
                 }),
                 UIAction(title: "One Year", image: nil, handler: { (_) in
                     self.deleteStatsBtn.setTitle("One Month", for: .normal)
+                    userPrefs.deleteStatsAfter = 360
+                    Functions.SharedInstance.savePrefs(key: "wallyios.userPrefs", array: userPrefs)
+                    NotificationCenter.default.post(name: .refreshHomeScreen, object: nil)
                 })
             ]
         }
