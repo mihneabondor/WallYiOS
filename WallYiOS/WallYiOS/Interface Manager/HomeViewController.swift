@@ -99,6 +99,12 @@ class HomeViewController: UIViewController {
     @objc func refreshHomeScreen() {
         DispatchQueue.main.async {
             self.networthLabelSetup()
+            
+            self.statsView.subviews.forEach({ $0.removeFromSuperview() })
+            let childView = UIHostingController(rootView: StatView(data: data.filter{$0.amount >= 0}, color: Color("OldPurple")))
+            childView.view.frame = self.self.statsView.bounds
+            childView.view.layer.cornerRadius = 16
+            self.statsView.addSubview(childView.view)
         }
     }
     
