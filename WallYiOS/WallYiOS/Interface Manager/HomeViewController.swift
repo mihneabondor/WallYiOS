@@ -39,7 +39,8 @@ class HomeViewController: UIViewController {
     
     //MARK: -Sections Control-
     @IBAction func showMoreNetworthTapped(_ sender: Any) {
-        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "NetworthVC") as! NetworthViewController
+        self.present(vc, animated: true)
     }
     
     @IBAction func showMoreStatsTapped(_ sender: Any) {

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9A290CB8294E3CC3002B78EC /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A290CB7294E3CC3002B78EC /* StatsViewController.swift */; };
+		9A290CBA294E4139002B78EC /* NetworthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A290CB9294E4139002B78EC /* NetworthViewController.swift */; };
+		9A290CBC294E43A8002B78EC /* OperationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A290CBB294E43A8002B78EC /* OperationCell.swift */; };
 		9AA4C63F294DE29D009DDECC /* EasyTipView in Frameworks */ = {isa = PBXBuildFile; productRef = 9AA4C63E294DE29D009DDECC /* EasyTipView */; };
 		9ABE01B9294CD6BF00EAE9CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01B8294CD6BF00EAE9CB /* HomeViewController.swift */; };
 		9ABE01BB294CD6C400EAE9CB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01BA294CD6C400EAE9CB /* SettingsViewController.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		9A290CB7294E3CC3002B78EC /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		9A290CB9294E4139002B78EC /* NetworthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworthViewController.swift; sourceTree = "<group>"; };
+		9A290CBB294E43A8002B78EC /* OperationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCell.swift; sourceTree = "<group>"; };
 		9ABE01B8294CD6BF00EAE9CB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9ABE01BA294CD6C400EAE9CB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9ABE01BC294CD85C00EAE9CB /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				9A290CB7294E3CC3002B78EC /* StatsViewController.swift */,
+				9A290CB9294E4139002B78EC /* NetworthViewController.swift */,
+				9A290CBB294E43A8002B78EC /* OperationCell.swift */,
 			);
 			path = Details;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D70F3A48294BB62F00BB9858 /* WelcomeViewController.swift in Sources */,
+				9A290CBA294E4139002B78EC /* NetworthViewController.swift in Sources */,
 				9ABE01BF294CE9FC00EAE9CB /* StatView.swift in Sources */,
 				D70F3A44294BB62F00BB9858 /* AppDelegate.swift in Sources */,
 				9ABE01C1294CF57D00EAE9CB /* AddIncomeViewController.swift in Sources */,
@@ -232,6 +239,7 @@
 				9ABE01BB294CD6C400EAE9CB /* SettingsViewController.swift in Sources */,
 				D71ABE58294D137C00939928 /* Extensions.swift in Sources */,
 				9ABE01BD294CD85C00EAE9CB /* GradientLabel.swift in Sources */,
+				9A290CBC294E43A8002B78EC /* OperationCell.swift in Sources */,
 				9ABE01B9294CD6BF00EAE9CB /* HomeViewController.swift in Sources */,
 				9ADA02FE294DEA6C00B842FE /* TipsManager.swift in Sources */,
 				D71ABE54294D036000939928 /* Struct.swift in Sources */,
