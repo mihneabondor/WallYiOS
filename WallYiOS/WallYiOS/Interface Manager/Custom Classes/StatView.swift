@@ -20,6 +20,8 @@ struct StatView: View {
                 )
             }
         }.padding()
+        .background(Color("Detail"))
+        .cornerRadius(16)
     }
 }
 
