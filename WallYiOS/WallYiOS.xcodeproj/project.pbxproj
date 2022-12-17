@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9AA4C63F294DE29D009DDECC /* EasyTipView in Frameworks */ = {isa = PBXBuildFile; productRef = 9AA4C63E294DE29D009DDECC /* EasyTipView */; };
 		9ABE01B9294CD6BF00EAE9CB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01B8294CD6BF00EAE9CB /* HomeViewController.swift */; };
 		9ABE01BB294CD6C400EAE9CB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01BA294CD6C400EAE9CB /* SettingsViewController.swift */; };
 		9ABE01BD294CD85C00EAE9CB /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01BC294CD85C00EAE9CB /* GradientLabel.swift */; };
@@ -14,6 +15,7 @@
 		9ABE01C1294CF57D00EAE9CB /* AddIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01C0294CF57D00EAE9CB /* AddIncomeViewController.swift */; };
 		9ABE01C3294CF58200EAE9CB /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01C2294CF58200EAE9CB /* AddExpenseViewController.swift */; };
 		9ABE01C5294CFC2800EAE9CB /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01C4294CFC2800EAE9CB /* KeyboardExtension.swift */; };
+		9ADA02FE294DEA6C00B842FE /* TipsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA02FD294DEA6C00B842FE /* TipsManager.swift */; };
 		D70F3A44294BB62F00BB9858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70F3A43294BB62F00BB9858 /* AppDelegate.swift */; };
 		D70F3A46294BB62F00BB9858 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70F3A45294BB62F00BB9858 /* SceneDelegate.swift */; };
 		D70F3A48294BB62F00BB9858 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70F3A47294BB62F00BB9858 /* WelcomeViewController.swift */; };
@@ -33,6 +35,7 @@
 		9ABE01C0294CF57D00EAE9CB /* AddIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIncomeViewController.swift; sourceTree = "<group>"; };
 		9ABE01C2294CF58200EAE9CB /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		9ABE01C4294CFC2800EAE9CB /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
+		9ADA02FD294DEA6C00B842FE /* TipsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsManager.swift; sourceTree = "<group>"; };
 		D70F3A40294BB62F00BB9858 /* WallYiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallYiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70F3A43294BB62F00BB9858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D70F3A45294BB62F00BB9858 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AA4C63F294DE29D009DDECC /* EasyTipView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +78,7 @@
 			children = (
 				D71ABE53294D036000939928 /* Struct.swift */,
 				D71ABE55294D043E00939928 /* Functions.swift */,
+				9ADA02FD294DEA6C00B842FE /* TipsManager.swift */,
 				D71ABE57294D137C00939928 /* Extensions.swift */,
 			);
 			path = "Logic Manager";
@@ -145,6 +150,9 @@
 			dependencies = (
 			);
 			name = WallYiOS;
+			packageProductDependencies = (
+				9AA4C63E294DE29D009DDECC /* EasyTipView */,
+			);
 			productName = WallYiOS;
 			productReference = D70F3A40294BB62F00BB9858 /* WallYiOS.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +181,9 @@
 				Base,
 			);
 			mainGroup = D70F3A37294BB62F00BB9858;
+			packageReferences = (
+				9AA4C63D294DE29D009DDECC /* XCRemoteSwiftPackageReference "EasyTipView" */,
+			);
 			productRefGroup = D70F3A41294BB62F00BB9858 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -211,6 +222,7 @@
 				D71ABE58294D137C00939928 /* Extensions.swift in Sources */,
 				9ABE01BD294CD85C00EAE9CB /* GradientLabel.swift in Sources */,
 				9ABE01B9294CD6BF00EAE9CB /* HomeViewController.swift in Sources */,
+				9ADA02FE294DEA6C00B842FE /* TipsManager.swift in Sources */,
 				D71ABE54294D036000939928 /* Struct.swift in Sources */,
 				D71ABE56294D043E00939928 /* Functions.swift in Sources */,
 			);
@@ -440,6 +452,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9AA4C63D294DE29D009DDECC /* XCRemoteSwiftPackageReference "EasyTipView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/teodorpatras/EasyTipView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9AA4C63E294DE29D009DDECC /* EasyTipView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AA4C63D294DE29D009DDECC /* XCRemoteSwiftPackageReference "EasyTipView" */;
+			productName = EasyTipView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D70F3A38294BB62F00BB9858 /* Project object */;
 }

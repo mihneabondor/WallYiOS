@@ -446,8 +446,8 @@
                                     <constraint firstAttribute="height" constant="170" id="bZu-vo-IbM"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saving Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmE-gP-B9R">
-                                <rect key="frame" x="15.999999999999993" y="441" width="112.33333333333331" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmE-gP-B9R">
+                                <rect key="frame" x="16" y="441" width="83.666666666666671" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="CM4-lL-N0G"/>
                                 </constraints>
@@ -470,6 +470,18 @@
                                     <action selector="showMoreStatsTapped:" destination="bnA-WZ-fIO" eventType="touchUpInside" id="ZDP-xR-bb2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqU-Qq-ew9">
+                                <rect key="frame" x="16" y="79" width="101" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="4t9-3F-65d"/>
+                                    <constraint firstAttribute="height" constant="101" id="BUD-Yo-GPJ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                                <connections>
+                                    <action selector="tipTapped:" destination="bnA-WZ-fIO" eventType="touchUpInside" id="iT7-mp-zbd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a9R-qn-yf5"/>
                         <color key="backgroundColor" name="Background"/>
@@ -482,11 +494,13 @@
                             <constraint firstItem="AkF-hh-e1w" firstAttribute="top" secondItem="NC6-ug-N9L" secondAttribute="bottom" constant="12" id="FtB-bX-ixs"/>
                             <constraint firstItem="Zz5-cA-aRD" firstAttribute="top" secondItem="vd9-e9-A4u" secondAttribute="bottom" constant="8" symbolic="YES" id="QVY-XV-ufd"/>
                             <constraint firstItem="YUP-mN-ITU" firstAttribute="leading" secondItem="a9R-qn-yf5" secondAttribute="leading" constant="16" id="S1b-a2-FxO"/>
+                            <constraint firstItem="FqU-Qq-ew9" firstAttribute="leading" secondItem="a9R-qn-yf5" secondAttribute="leading" constant="16" id="SNX-fT-JXr"/>
                             <constraint firstItem="mmE-gP-B9R" firstAttribute="leading" secondItem="a9R-qn-yf5" secondAttribute="leading" constant="16" id="TVT-hL-3F8"/>
                             <constraint firstItem="yVb-Se-tYm" firstAttribute="leading" secondItem="a9R-qn-yf5" secondAttribute="leading" constant="16" id="Wea-wv-1zf"/>
                             <constraint firstItem="yVb-Se-tYm" firstAttribute="top" secondItem="SxR-qp-1Bq" secondAttribute="bottom" constant="16" id="Whi-5Q-LJ6"/>
                             <constraint firstItem="Zz5-cA-aRD" firstAttribute="leading" secondItem="a9R-qn-yf5" secondAttribute="leading" constant="16" id="a9e-2F-zp9"/>
                             <constraint firstItem="a9R-qn-yf5" firstAttribute="trailing" secondItem="Zz5-cA-aRD" secondAttribute="trailing" constant="16" id="dLI-Ki-YT5"/>
+                            <constraint firstItem="FqU-Qq-ew9" firstAttribute="top" secondItem="a9R-qn-yf5" secondAttribute="top" constant="20" id="eWR-Rg-5nw"/>
                             <constraint firstItem="AkF-hh-e1w" firstAttribute="leading" secondItem="a9R-qn-yf5" secondAttribute="leading" constant="16" id="hBN-18-F6x"/>
                             <constraint firstItem="SxR-qp-1Bq" firstAttribute="leading" secondItem="a9R-qn-yf5" secondAttribute="leading" constant="16" id="haA-Pf-kbh"/>
                             <constraint firstItem="NC6-ug-N9L" firstAttribute="leading" secondItem="a9R-qn-yf5" secondAttribute="leading" constant="16" id="jxs-B4-Hle"/>
@@ -507,6 +521,7 @@
                         <outlet property="networthView" destination="NC6-ug-N9L" id="edA-Pz-l3b"/>
                         <outlet property="settingsBtn" destination="cpZ-IP-1v2" id="6Fa-7h-Jyl"/>
                         <outlet property="statsView" destination="Zz5-cA-aRD" id="OmR-mr-1hN"/>
+                        <outlet property="tipLogo" destination="YUP-mN-ITU" id="6e5-gs-aOQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERs-Nk-tAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

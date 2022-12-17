@@ -7,8 +7,11 @@
 
 import UIKit
 import SwiftUI
+import EasyTipView
 
 class HomeViewController: UIViewController {
+    
+    var tipView: EasyTipView!
     
     //MARK: -Tab Bar-
     @IBOutlet weak var floatingView: UIView!
@@ -44,7 +47,9 @@ class HomeViewController: UIViewController {
     }
     
     var data = Functions.SharedInstance.getData(key: "wallyios.savedOperations")
+    
     @IBOutlet var NetworthLabel : UILabel!
+    
     func networthLabelSetup() {
         var sum = 0;
         for item in data {
@@ -55,12 +60,42 @@ class HomeViewController: UIViewController {
         NetworthLabel.text = "\(sum) RON"
     }
     
+    //MARK: -Tips View-
+    @IBOutlet weak var tipLogo: UIImageView!
+    @IBAction func tipTapped(_ sender: Any) {
+        if tipView != nil {
+            tipView.dismiss()
+        }
+        UIView.animate(withDuration: 0.25, delay: 0.0, options: [.autoreverse]) {
+            self.tipLogo.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        } completion: { _ in
+            self.tipLogo.transform = .identity
+        }
+        tipView = EasyTipView(text: TipsManager.sharedInstance.getNewTip())
+        tipView.show(forView: tipLogo, withinSuperview: self.view)
+    }
+    
+    func setUpTipsView() {
+        var preferences = EasyTipView.Preferences()
+        preferences.drawing.font = .systemFont(ofSize: 17, weight: .regular)
+        preferences.drawing.foregroundColor = .label
+        preferences.drawing.backgroundColor = UIColor(named: "Detail")!
+        preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.left
+        preferences.drawing.cornerRadius = 16.0
+        
+        preferences.positioning.maxWidth = self.view.frame.width/2 + 10
+        
+        preferences.animating.dismissOnTap = true
+
+        EasyTipView.globalPreferences = preferences
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         styleTabBar()
         styleViewController()
         networthLabelSetup()
+        setUpTipsView()
     }
     
     func styleViewController() {
