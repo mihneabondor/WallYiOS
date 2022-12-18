@@ -18,6 +18,8 @@
 		9ABE01C1294CF57D00EAE9CB /* AddIncomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01C0294CF57D00EAE9CB /* AddIncomeViewController.swift */; };
 		9ABE01C3294CF58200EAE9CB /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01C2294CF58200EAE9CB /* AddExpenseViewController.swift */; };
 		9ABE01C5294CFC2800EAE9CB /* KeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABE01C4294CFC2800EAE9CB /* KeyboardExtension.swift */; };
+		9ACBE809294F0A7D00CA7711 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBE808294F0A7D00CA7711 /* NotificationsViewController.swift */; };
+		9ACBE80B294F0C8E00CA7711 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACBE80A294F0C8E00CA7711 /* NotificationsManager.swift */; };
 		9ADA02FE294DEA6C00B842FE /* TipsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADA02FD294DEA6C00B842FE /* TipsManager.swift */; };
 		D70F3A44294BB62F00BB9858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70F3A43294BB62F00BB9858 /* AppDelegate.swift */; };
 		D70F3A46294BB62F00BB9858 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70F3A45294BB62F00BB9858 /* SceneDelegate.swift */; };
@@ -41,6 +43,8 @@
 		9ABE01C0294CF57D00EAE9CB /* AddIncomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIncomeViewController.swift; sourceTree = "<group>"; };
 		9ABE01C2294CF58200EAE9CB /* AddExpenseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
 		9ABE01C4294CFC2800EAE9CB /* KeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardExtension.swift; sourceTree = "<group>"; };
+		9ACBE808294F0A7D00CA7711 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		9ACBE80A294F0C8E00CA7711 /* NotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		9ADA02FD294DEA6C00B842FE /* TipsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsManager.swift; sourceTree = "<group>"; };
 		D70F3A40294BB62F00BB9858 /* WallYiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallYiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D70F3A43294BB62F00BB9858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 				D71ABE55294D043E00939928 /* Functions.swift */,
 				9ADA02FD294DEA6C00B842FE /* TipsManager.swift */,
 				D71ABE57294D137C00939928 /* Extensions.swift */,
+				9ACBE80A294F0C8E00CA7711 /* NotificationsManager.swift */,
 			);
 			path = "Logic Manager";
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 			children = (
 				9ABE01C0294CF57D00EAE9CB /* AddIncomeViewController.swift */,
 				9ABE01C2294CF58200EAE9CB /* AddExpenseViewController.swift */,
+				9ACBE808294F0A7D00CA7711 /* NotificationsViewController.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -237,6 +243,8 @@
 				D70F3A46294BB62F00BB9858 /* SceneDelegate.swift in Sources */,
 				9ABE01C5294CFC2800EAE9CB /* KeyboardExtension.swift in Sources */,
 				9ABE01BB294CD6C400EAE9CB /* SettingsViewController.swift in Sources */,
+				9ACBE80B294F0C8E00CA7711 /* NotificationsManager.swift in Sources */,
+				9ACBE809294F0A7D00CA7711 /* NotificationsViewController.swift in Sources */,
 				D71ABE58294D137C00939928 /* Extensions.swift in Sources */,
 				9ABE01BD294CD85C00EAE9CB /* GradientLabel.swift in Sources */,
 				9A290CBC294E43A8002B78EC /* OperationCell.swift in Sources */,

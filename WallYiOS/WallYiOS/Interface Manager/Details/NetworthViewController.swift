@@ -8,7 +8,9 @@
 import UIKit
 
 class NetworthViewController: UIViewController {
+    
     var tableData : [Operation] = data.filter{$0.amount != 0}
+    
     @IBAction func backTapped(_ sender: Any) {
         self.dismiss(animated: true)
     }
@@ -78,7 +80,7 @@ extension NetworthViewController: UITableViewDataSource, UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OperationCell") as! OperationCell
-        cell.numberLbl.text = String(abs(tableData[indexPath.row].amount))
+        cell.numberLbl.text = String(abs(tableData[indexPath.row].amount)) + "\(userPrefs.currency)"
         if tableData[indexPath.row].amount > 0 {
             cell.signIcon.image = UIImage(systemName: "plus")
             cell.numberLbl.textColor = UIColor(named: "OldPurple")!

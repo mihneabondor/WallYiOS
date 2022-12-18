@@ -29,6 +29,12 @@ class SettingsViewController: UIViewController {
     //MARK: -Actions-
     @IBOutlet weak var cardView4: UIView!
     @IBOutlet weak var cardView5: UIView!
+    @IBOutlet weak var cardView6: UIView!
+    
+    @IBAction func notificationsTapped(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "NotificationsVC") as! NotificationsViewController
+        self.present(vc, animated: true)
+    }
     
     @IBAction func deleteDataTapped(_ sender: Any) {
         data = [.init(amount: 0, weekDay: "Mon"),
@@ -70,6 +76,7 @@ class SettingsViewController: UIViewController {
         cardView3.layer.cornerRadius = 12.0
         cardView4.layer.cornerRadius = 12.0
         cardView5.layer.cornerRadius = 12.0
+        cardView6.layer.cornerRadius = 12.0
     }
     
     func addMenus() {

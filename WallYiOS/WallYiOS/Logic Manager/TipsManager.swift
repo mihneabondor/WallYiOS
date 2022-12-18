@@ -20,7 +20,7 @@ class TipsManager {
     private init() {}
     
     func getNewTip() -> String {
-        let tip = tips.randomElement()!
+        let tip = "Try writing down any purchase you want to make."//tips.randomElement()!
         return tip
     }
     
