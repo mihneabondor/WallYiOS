@@ -1,5 +1,5 @@
 # WallYiOS
-## The manager for your e-money
+## The manager for your e-money :pig:
 Wally is the winner of a local coding contest, being the result of 5 days in which we tried to add as many features and leave out as many bugs as possible.
 
 <sub> Part of the charitable coding contest held by RO050 robotics team from Romania </sub>
@@ -10,7 +10,7 @@ Wally is the winner of a local coding contest, being the result of 5 days in whi
 
 ![WhatsApp Image 2022-12-17 at 10 27 41 PM](https://user-images.githubusercontent.com/73481899/209373812-b2505f96-eafe-4f8f-b1e5-6bf7eee6367b.jpeg)
 
-### Features:
+### Features
 - Quickly track any income/expense
 - Set any recurring income/expense, so that it's taken into account with no extra effort.
 - Daily reminders: you can set to receive timed or location based notifications to add data into Wally.
